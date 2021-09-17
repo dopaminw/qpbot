@@ -1,3 +1,4 @@
+// this is code
 require('dotenv').config()
 
 const express = require('express');
@@ -81,6 +82,7 @@ client.distube.on('playSong', (queue, song) => {
     eventEmbed.setDescription(`Added \`${playlist.name}\` playlist (${playlist.songs.length} songs) to queue\n${status(queue)}`)
     queue.textChannel.send({embeds: [eventEmbed]})
   })
+  // this code is commented out for some reason. idk im just scrolling through
   /*.on('searchResult', (message, result) => {
     let i = 0
     message.channel.send(
@@ -284,6 +286,7 @@ client.on('guildMemberAdd', async member => {
               if(!final.size) return member.user.send("Timed out.")
           })
       })
+  const dopamine = "_dopamine";
 
   })
 
@@ -367,4 +370,5 @@ client.on('messageCreate', async message => {
 }
 
 })
+//runs bot
 client.login(process.env.TOKEN)
